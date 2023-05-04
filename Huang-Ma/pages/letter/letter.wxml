@@ -1,0 +1,38 @@
+<!--pages/letter/letter.wxml-->
+<view class="container">
+  <!--放一个标题-->
+  <view class="TitleHolder">
+        <text>致用户的一封信：</text>
+  </view>
+  <!--放发布者信息-->
+  <view class="PublisherInfoHolder">
+    <view class="HoldON"></view>
+    <view class="Pholder">
+    <!--放头像-->
+        <view class="WxP">
+            <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F11%2F44%2F59039ee69ca56_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653046132&t=bdf3cdf907e522c0409a2913e25db265"></image>
+        </view>
+        <!--放名字和个性签名-->
+        <view class="Pinfo">
+            <text class="wxnameholder">iShare yCare\n</text>
+            <text class="des">所以啊，生命它璀璨如歌！</text>
+        </view>
+    </view>
+  </view>
+   <!--接下来放主要内容-->
+   <view class="MainContentHolder">   
+        <text user-select="true">2002年非典肆虐，70后扛起志愿大旗守护人民安危\n
+          2008年汶川地震，80后不问出处只求安定一方动荡\n
+          2019年新冠疫情，90后身披白衣素甲坚守在最前方\n
+          疫情依然肆虐，剥夺着我们最后的青春时光，\n
+          那我们00后又该如何才能不算浪费时光？\n
+          看着疫情中的一个个志愿者闪闪发光，\n
+          我们找到了方向！\n
+          iShare yCare\n
+          寓意着I Share You Care的善良\n
+          于是我们扬帆起航\n
+          只为给在疫情中孤独的你带来点点微光！\n</text>
+    </view>
+  <!--分割线-->
+  <view class="spereator"></view>
+</view>

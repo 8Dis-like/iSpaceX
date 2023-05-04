@@ -1,0 +1,53 @@
+<!--pages/Write/Write.wxml-->
+
+<view class="Maincontainer">
+    <input name="Title" placeholder="起一个有意义的标题..." bindinput="titleinput"/>
+    <!--用户输入描述信息-->
+    <textarea value="{{InputInfo}}" class="InputInfo" placeholder="分享消息...(最多输入140字)" maxlength="140" show-confirm-bar="true" bindinput="GetInputInfo"></textarea>
+    <!--用户选择照片或视频，用九宫格呈现-->
+    <view class="MediaContainer">
+        <view class="InnerHolder" wx:for="{{Imglist}}" wx:for-index="idx" wx:for-item="Imgsrc" wx:key="idx">
+            <image src="{{Imgsrc}}" style="width:100%;height:100%" mode="aspectFill" bindlongpress="DeleteImg" bindtap="Preview" data-idx="{{idx}}" data-imglist="{{Imglist}}" data-mp4list="{{MP4list}}"></image>
+        </view>
+        <view class="InnerHolder" wx:for="{{MP4list}}" wx:for-index="idx" wx:for-item="MP4src" wx:key="idx">
+            <image src="/images/player.png" style="width:100%;height:100%" mode="aspectFill" bindlongpress="DeleteMP4" bindtap="Preview"  data-index="{{idx}}" data-idx="{{idx+Imglist.length}}" data-imglist="{{Imglist}}" data-mp4list="{{MP4list}}"></image>
+        </view>
+        <view class="{{showView?'InnerHolder2':'Hide'}}" bindtap="OpenMedia">
+            <image class="ChooseMediaIcon" src="/images/plus.png" mode="aspectFit"></image>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <!--用户输入事件类型-->
+    <view class="Locate">
+        <view class="LocateLaying" bindtap="ChooseType">
+            <image src="/images/type.png" class="AttenIcon"></image>
+            <view class="{{typeclass}}">{{typechosen}}</view>
+            <image src="/images/Right.png" class="RightIcon"></image>
+        </view>
+    </view>
+
+    <!--分割线-->
+    <view class="spereator"></view>
+    <!--用户定位-->
+    <view class="Locate" bindtap="GetLocation">
+        <view class="LocateLaying">
+            <image src="/images/{{LocaIcon}}" class="LocateIcon"></image>
+            <view class="{{classname}}">{{LocationName}}</view>
+            <image src="/images/Right.png" class="RightIcon"></image>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <!--他人是否可更改事件进展-->
+    <view class="Locate" bindtap="GetCheckchosen">
+        <view class="LocateLaying">
+            <image src="/images/{{CheckIcon}}" class="LocateIcon"></image>
+            <view class="CheckHolder">{{allchecks[checkchosen]}}</view>
+            <image src="/images/Right.png" class="RightIcon"></image>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <button type="primary" bindtap="Upload">发布</button>
+</view>

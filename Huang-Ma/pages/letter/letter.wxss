@@ -1,0 +1,84 @@
+/* pages/letter/letter.wxss */
+.container {
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+}
+
+.TitleHolder{
+  position: relative;
+  width: 650rpx;
+  padding: 40rpx 50rpx 30rpx;
+  background-color: #FFCC66;
+  color: #fff;
+  font-size: 38rpx;
+  line-height: 48rpx;
+}
+.PublisherInfoHolder{
+  position: relative;
+  width: 750rpx;
+  height: 150rpx;
+  background: #fff;
+}
+.HoldON{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 120rpx;
+  background: #FFCC66;
+}
+.Pholder{
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 625rpx;
+  height: 94rpx;
+  padding: 30rpx;
+  background: #fff;
+  border: solid 1px #e4e4e4;
+  border-radius: 6rpx;
+  box-shadow: 0 1px 2px #b6b6b6;
+  margin-top: 50rpx;
+}
+.WxP{
+  text-align: left;
+  width: 90rpx;
+  height: 90rpx;
+}
+.Pholder .WxP image {
+  display: inline-block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+}
+.Pinfo{
+  flex: 5;
+  text-align: left;
+  padding: 10rpx 20rpx;
+  line-height: 38rpx;
+  flex-grow: 1;
+}
+.wxnameholder{
+  font-size: 34rpx;
+}
+.des{
+  font-size: 23rpx;
+  color: #797878;
+  line-height: 28rpx;
+}
+.spereator{
+  margin-top: 100rpx;
+  margin: 0 auto;
+  width: 90%;
+  height: 2rpx;
+  background: linear-gradient(to right, #f5e4c2, #FFCC66, #f5e4c2);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35rpx;
+}
+.MainContentHolder text{
+  margin-top: 100rpx;
+  display: flex;
+  font-size: 30rpx;
+  color: black;
+}

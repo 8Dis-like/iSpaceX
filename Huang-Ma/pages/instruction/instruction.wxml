@@ -1,0 +1,28 @@
+<!--pages/instruction/instruction.wxml-->
+<view class="container">
+  <!--放一个标题-->
+  <view class="TitleHolder">
+        <text>关于我们：</text>
+  </view>
+  <!--放发布者信息-->
+  <view class="PublisherInfoHolder">
+    <view class="HoldON"></view>
+    <view class="Pholder">
+    <!--放头像-->
+        <view class="WxP">
+            <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F11%2F44%2F59039ee69ca56_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653046132&t=bdf3cdf907e522c0409a2913e25db265"></image>
+        </view>
+        <!--放名字和个性签名-->
+        <view class="Pinfo">
+            <text class="wxnameholder">iShare yCare\n</text>
+            <text class="des">所以啊，生命它璀璨如歌！</text>
+        </view>
+    </view>
+  </view>
+   <!--接下来放主要内容-->
+   <scroll-view scroll-y="true" class="MainContentHolder">   
+        <text user-select="true">秉承着I Share You Care,You Share I Care的理念，以传递爱心、帮助他人为目标,我们日以继夜、废寝忘食地开发出了这款小程序。\n\n iShare yCare是一款集求助、救援、论坛、地图一体的多功能小程序。您可以在遇到困难时发布一条事件，不久便会有热心之士为您排忧解惑；您同样也可以向他人伸出援助之手，只需要您轻点屏幕，iShare yCare就会指引您到他（求助者）所在的方向；迷路时，您也可以进入iSare yCare，它会带您去您想到地方。\n \n当然，如果您对我们的产品感兴趣，或者对我们的团队感兴趣，我们随时欢迎您的来访和加入。\n\niSare yCare还有很多奇妙的功能等着您亲自探索，我们也希望它可以为您带来一些善意。\n\n联系电话：15272104528\t联系人：马文卓）\n联系邮箱：2574485753@qq.com\n联系人：马文卓</text>
+    </scroll-view>
+  <!--分割线-->
+  <view class="spereator"></view>
+</view>
