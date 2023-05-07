@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<button bindtap="add">ADD</button>
+
+<!--index.wxml-->
+<!--轮播图-->
+<swiper class="swiper-container" indicator-dots autoplay circular interva="2500">
+  <swiper-item>
+    <image class="swiper-item" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F79%2F16%2F59668f8824d43_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652939381&t=2a5c35295612ba918be58b5a8fd4" style="width:100%"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="swiper-item" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fss2.meipian.me%2Fusers%2F13288253%2Fed54de2b43355c8880ac18621762f571.jpg%3Fmeipian-raw%2Fbucket%2Fivwen%2Fkey%2FdXNlcnMvMTMyODgyNTMvZWQ1NGRlMmI0MzM1NWM4ODgwYWMxODYyMTc2MmY1NzEuanBn%2Fsign%2Fa5f9547a8ede5a21e5b75a632447dec4.jpg&refer=http%3A%2F%2Fss2.meipian.me&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652940310&t=46bc641cee015c07163d05572bf396fc" style="width:100%"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="swiper-item" src="https://img2.baidu.com/it/u=2488404441,3817395952&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=437" style="width:100%"></image>
+  </swiper-item>
+</swiper>
+
+<!--滚动界面-->
+<scroll-view class="scroll-container" scroll-y>
+  <view class="scroll-item" bindtap="to_letter">
+   <image class="images" mode="scaleToFill" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fb2f288e4c0d62356e3dd83c3d4eb9d30befad0965a49-dOOMse_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653043661&t=88821a8719b00bdcf00cbcbbed3a7cfb"></image>
+   <text class="title">写在前面</text>
+  </view>
+  <view class="scroll-item" bindtap="to_instruction">
+    <image class="images" mode="scaleToFill" src="https://img2.baidu.com/it/u=3693849098,1191935871&fm=253&fmt=auto&app=138&f=JPEG?w=759&h=500"></image>
+   <text class="title">关于我们</text>
+  </view>
+
+</scroll-view>
+  
