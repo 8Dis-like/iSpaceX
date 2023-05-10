@@ -23,7 +23,7 @@
   },
   "include": [
     "./**/*.ts"
-  ],
+, "miniprogram/pages/map/map.ts"  ],
   "exclude": [
     "node_modules"
   ]

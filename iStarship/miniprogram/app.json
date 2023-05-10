@@ -43,5 +43,18 @@
       "text": "我的",
       "iconPath": "/images/icon/mine.png",
       "selectedIconPath": "/images/icon/mine_selected.png"
-    }]}
+    }]},
+
+    "plugins": {
+      "routePlan": {
+      "version": "1.0.2",
+      "provider": "wx63ffb7b7894e99ae"
+      }
+    },
+  
+    "permission": {
+      "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+      }
+    }
 }

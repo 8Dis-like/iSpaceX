@@ -1,7 +1,4 @@
 <!--index.wxml-->
-<button bindtap="add">ADD</button>
-
-<!--index.wxml-->
 <!--轮播图-->
 <swiper class="swiper-container" indicator-dots autoplay circular interva="2500">
   <swiper-item>

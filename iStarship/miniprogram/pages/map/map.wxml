@@ -1,2 +1,12 @@
 <!--pages/map/map.wxml-->
-<text>pages/map/map.wxml</text>
+<!-- 定位 -->
+<map latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" scale="14" bindmarkertap="markertap" show-location></map>
+<view>
+  <input class="title" placeholder="请输入目的地" bindinput="destination"></input>
+  <view class="address">{{address[index].address}}</view>
+  <!--<view class="title">{{address[index].title}}</view>
+  <view class="address">{{address[index].address}}</view>-->
+  <view class="navigate" bindtap="nav">
+    <image mode="widthFix" src="/images/icon/navigate.png"></image>
+  </view>
+</view>

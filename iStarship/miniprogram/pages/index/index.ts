@@ -5,7 +5,6 @@ Page({
   onLoad() {
     
     wx.showToast({
-      
       title: '成功',
       icon: 'success',
       duration: 700//持续的时间
