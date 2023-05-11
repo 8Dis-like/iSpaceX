@@ -1,2 +1,104 @@
 <!--pages/Detail/Detail.wxml-->
-<text>pages/Detail/Detail.wxml</text>
+<view class="container">
+    <!--放一个标题-->
+    <view class="TitleHolder">
+        <text>{{userinfo.title}}</text>
+    </view>
+    <!--放发布者信息-->
+    <view class="PublisherInfoHolder">
+        <view class="HoldON"></view>
+        <view class="Pholder">
+        <!--放头像-->
+            <view class="WxP">
+                <image src="{{userinfo.wxsrc}}"></image>
+            </view>
+            <!--放名字和个性签名-->
+            <view class="Pinfo">
+                <text class="wxnameholder">{{userinfo.wxnn}}\n</text>
+                <text class="des">{{userinfo.personalsign}}</text>
+            </view>
+        </view>
+    </view>
+    <!--发布的事件类型-->
+    <view class="TypeHolder" bindtap="Go2There">
+        <view class="LocateLaying">
+            <view class="TypeDes">@ {{userinfo.eventype}}</view>
+        </view>
+    </view>
+    <!--发布的位置信息-->
+    <view class="LocateHolder" bindtap="Go2There">
+        <view class="LocateLaying">
+            <view class="LocateDes"># {{userinfo.locationname}}</view>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <!--接下来放主要内容-->
+    <view class="MainContentHolder">   
+        <text user-select="true">{{userinfo.content}}</text>
+    </view>
+
+    <!--接下来放用户选择的照片或视频，用九宫格呈现-->
+    <view class="MediaContainer">
+        <view class="InnerHolder" wx:for="{{userinfo.imgurl}}" wx:for-index="idx" wx:for-item="Imgsrc" wx:key="idx">
+            <image src="{{Imgsrc}}" style="width:100%;height:100%" mode="aspectFill" bindtap="Preview"  data-idx="{{idx}}" data-imglist="{{userinfo.imgurl}}" data-mp4list="{{userinfo.mp4url}}"></image>
+        </view>
+        <view class="InnerHolder" wx:for="{{userinfo.mp4url}}" wx:for-index="idx" wx:for-item="MP4src" wx:key="idx">
+            <image src="/images/player.png" style="width:100%;height:100%" mode="aspectFill" bindtap="Preview"  data-index="{{idx}}" data-idx="{{idx+userinfo.imgurl.length}}" data-imglist="{{userinfo.imgurl}}" data-mp4list="{{userinfo.mp4url}}"></image>
+        </view>
+    </view>
+    <!--放一个发布时间在右下角-->
+    <text class="DateContainer">{{userinfo.date}}</text>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <!--接下来放评论内容-->
+    <view class="CTitle">评论区</view>
+    <scroll-view class="Commentcontainer" scroll-y="true">
+        <block wx:for="{{userinfo.comment}}" wx:for-index="idx" wx:for-item="item">
+            <view class="feed-item">
+                <view class="feed-source">
+                    <view class="avater">
+                    <!--这里放头像-->
+                        <image src="{{item.wxsrc}}" class="avatarimage"></image>
+                    </view>
+                    <!--这里放微信名称-->
+                    <text>{{item.wxnn}}</text>
+                    <view class="Apper">评论于{{item.date}}</view>
+                </view>
+                <!--主要内容-->
+                <view class="feed-content">
+                    <view class="content-body">
+                        <text>{{item.content}}</text>
+                    </view>
+                    <!--接下来放每条评论选择的照片或视频，用九宫格呈现-->
+                    <view class="MediaContainer">
+                        <view class="InnerHolder" wx:for="{{item.imgsrc}}" wx:for-index="index" wx:for-item="Imgsrc" wx:key="index">
+                            <image src="{{Imgsrc}}" style="width:100%;height:100%" mode="aspectFill" bindtap="Preview"  data-idx="{{index}}" data-imglist="{{item.imgsrc}}" data-mp4list="{{item.mp4src}}"></image>
+                        </view>
+                        <view class="InnerHolder" wx:for="{{item.mp4src}}" wx:for-index="index" wx:for-item="MP4src" wx:key="index">
+                            <image src="/images/player.png" style="width:100%;height:100%" mode="aspectFill" bindtap="Preview"  data-index="{{index}}" data-idx="{{index+item.imgsrc.length}}" data-imglist="{{item.imgsrc}}" data-mp4list="{{item.mp4src}}"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+
+
+    <view class="SSS"></view>
+
+    <!--下面放一个导航浮标-->
+    <view class="Director">
+        <view class="{{likeholder}}" bindtap="Like">
+            <image src="{{likesrc}}" class="OneHolderimage"></image>
+            <text class="LikeTxt">{{userinfo.likes}}</text>
+        </view>
+        <view class="progressHolder" bindtap="ChangeProgressing">
+            <text>{{userinfo.progressing}}</text>
+        </view>
+        <view class="SenHolder" bindtap="WriteComment">
+            <image src="/images/Comment.png" class="OneHolderimage"></image>
+            <text>{{userinfo.comment.length}}</text>
+        </view>
+    </view>
+</view>

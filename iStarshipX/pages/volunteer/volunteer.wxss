@@ -1,1 +1,127 @@
 /* pages/volunteer/volunteer.wxss */
+button{
+  margin: 50rpx;
+}
+
+.container{
+  padding: 0;
+  
+  font-size: 14rpx;
+  background-color: #FFCC66;
+  color: #000;
+}
+
+.container .feed-item{/**/
+  width: 690rpx;
+  padding: 30rpx 30rpx 20rpx;
+  margin: 7rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+.container .feed-item .feed-source{
+  width: 690rpx;
+  left: 0;
+  height: 50rpx;
+}
+.container .feed-item .feed-source .avatar{
+  position: relative;
+  display: inline-block;
+}
+.container .feed-item .feed-source text{
+      /*position: absolute;*/
+      display: inline-block;
+      height: 40rpx;
+      line-height: 40rpx;
+      vertical-align: middle;
+      margin: -74rpx 10rpx 0 85rpx;
+      color: lightskyblue;
+      font-size: 28rpx;
+}
+.container .feed-item .feed-source .Apper{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: -45rpx 14rpx 0 85rpx;
+  color: #c0c0c0;
+  font-size: 20rpx;
+}
+.avatarimage{
+  display: inline-block;
+  width: 55rpx;
+  height: 55rpx;
+  border-radius: 45rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.container .feed-item .feed-content{
+  padding: 10rpx 0 0 0;
+}
+.titlein{
+  display: inline-block;
+  height: 40rpx;
+}
+.container .feed-item .feed-content .Title text{
+  font-size: 28rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+}
+
+.container .feed-item .feed-content .content-body{
+  padding: 10rpx 0 0 0;
+  /*height: 10rpx;*/
+  font-size: 24rpx;
+  line-height: 28rpx;
+  color: #5b5b5b;
+}
+
+.container .feed-item .feed-content .BriefIn{
+  width: 690rpx;
+  padding: 10rpx 0  0;
+  text-align: right;
+}
+.container .feed-item .feed-content .BriefIn2{
+  width: 690rpx;
+  padding: 10rpx 0  0;
+  text-align: left;
+}
+.brtin{
+  margin-top: 5rpx;
+  display: inline-block;
+  height: 40rpx;
+  font-size: 26rpx;
+  color: #a0acac;
+}
+.brtpro{
+  margin-top: 10rpx;
+  display: inline-block;
+  height: 40rpx;
+  font-size: 26rpx;
+  
+  color: #af3070;
+}
+
+.AddIcon{
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  z-index: 9999;
+}
+.Type{
+  display: inline-block;
+  height: 35rpx;
+  color:#405acc;
+  font-size: 30rpx;
+  font-style: italic;
+  margin-bottom: 20rpx;
+}
+.Bottom{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-style: italic;
+  color: #a0acac;
+}

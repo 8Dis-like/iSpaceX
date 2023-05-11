@@ -19,7 +19,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffccff",
-    "navigationBarTitleText": "iShare yCare",
+    "navigationBarTitleText": "iStarship",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh":true
   },
@@ -62,8 +62,6 @@
     "provider": "wx63ffb7b7894e99ae"
     }
   },
-
- 
 
   "permission": {
     "scope.userLocation": {

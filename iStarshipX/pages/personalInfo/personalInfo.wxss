@@ -1,1 +1,36 @@
 /* pages/personalInfo/personalInfo.wxss */
+page{
+  background: white;
+  font-size: 32rpx;
+}
+.info>view{
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx;
+  line-height: 80rpx;
+  border-bottom: 2px solid gray;
+  height: 80rpx;
+}
+.info>view:last-child{
+  border: none;
+}
+.item1{
+  flex: 1;
+}
+.item2{
+  flex: 1;
+  text-align: right;
+}
+.item-vital1{
+  flex: 1;
+  color:red;
+}
+.item-vital2{
+  flex: 1;
+  text-align: right;
+}
+
+

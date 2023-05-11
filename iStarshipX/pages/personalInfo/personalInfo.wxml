@@ -1,2 +1,50 @@
 <!--pages/personalInfo/personalInfo.wxml-->
-<text>pages/personalInfo/personalInfo.wxml</text>
+<view class="info">
+  <!--姓名-->
+  <view>
+    <view class="item1">姓名</view>
+    <input class="item2" value="{{Name}}" type="text" confirm-type="done" bindinput="modify_name"></input>
+  </view>
+  <!--证件号码-->
+  <view>
+    <view class="item1">证件号码</view>
+    <input class="item2" value="{{idnumber}}" type="text" confirm-type="done" bindinput="modify_id"></input>
+  </view>
+  <!--性别-->
+  <view capture-bind:longpress="modify_gender">
+    <view class="item1">性别</view>
+    <input class="item2" value="{{gender}}" type="text" confirm-type="done" bindinput="modify_gender"></input>
+  </view>
+  <!--国家-->
+  <view capture-bind:longpress="modify_country">
+    <view class="item1">国家</view>
+    <input class="item2" value="{{country}}" type="text" confirm-type="done" bindinput="modify_country"></input>
+  </view>
+  <!--省份-->
+  <view capture-bind:longpress="modify_province">
+    <view class="item1">省份</view>
+    <input class="item2" value="{{province}}" type="text" confirm-type="done" bindinput="modify_province"></input>
+  </view>
+  <!--城市-->
+  <view capture-bind:longpress="modify_city">
+    <view class="item1">城市</view>
+    <input class="item2" value="{{city}}" type="text" confirm-type="done" bindinput="modify_city"></input>
+  </view>
+  <!--职业-->
+  <view capture-bind:longpress="modify_job">
+    <view class="item1">职业</view>
+    <input class="item2" value="{{job}}" type="text" confirm-type="done" bindinput="modify_job"></input>
+  </view>
+  <!--电话-->
+  <view capture-bind:longpress="modify_iphone">
+    <view class="item1">电话</view>
+    <input class="item2" value="{{phone}}" type="text" confirm-type="done" bindinput="modify_phone"></input>
+  </view>
+  <!--紧急联系电话-->
+  <view capture-bind:longpress="modify_vitalphone">
+    <view class="item-vital1">紧急联系电话</view>
+    <input class="item2" value="{{vitalphone}}" type="text" confirm-type="done" bindinput="modify_vitalphone"></input>
+  </view>
+  <button class="button" bindtap="save" type="primary">保存修改</button>
+</view>
+
