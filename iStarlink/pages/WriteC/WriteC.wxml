@@ -1,0 +1,21 @@
+<!--pages/Write/Write.wxml-->
+
+<view class="Maincontainer">
+    <!--用户输入评论信息-->
+    <textarea value="{{InputInfo}}" class="InputInfo" placeholder="写下你的评论...(最多输入100字)" maxlength="100" show-confirm-bar="true" bindinput="GetInputInfo"></textarea>
+    <!--用户选择照片或视频，用九宫格呈现-->
+    <view class="MediaContainer">
+        <view class="InnerHolder" wx:for="{{Imglist}}" wx:for-index="idx" wx:for-item="Imgsrc" wx:key="idx">
+            <image src="{{Imgsrc}}" style="width:100%;height:100%" mode="aspectFill" bindlongpress="DeleteImg" bindtap="Preview" data-idx="{{idx}}" data-imglist="{{Imglist}}" data-mp4list="{{MP4list}}"></image>
+        </view>
+        <view class="InnerHolder" wx:for="{{MP4list}}" wx:for-index="idx" wx:for-item="MP4src" wx:key="idx">
+            <image src="/images/player.png" style="width:100%;height:100%" mode="aspectFill" bindlongpress="DeleteMP4" bindtap="Preview"  data-index="{{idx}}" data-idx="{{idx+Imglist.length}}" data-imglist="{{Imglist}}" data-mp4list="{{MP4list}}"></image>
+        </view>
+        <view class="{{showView?'InnerHolder2':'Hide'}}" bindtap="OpenMedia">
+            <image class="ChooseMediaIcon" src="/images/plus.png" mode="aspectFit"></image>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="spereator"></view>
+    <button type="primary" bindtap="Upload">发布</button>
+</view>

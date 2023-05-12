@@ -1,0 +1,71 @@
+<!--pages/mine/mine.wxml-->
+<view class="view_contain">
+  <!-- 第一部分 -->
+ <view class="view_1">
+    <image src="{{backimg}}" class="background"></image>
+    <view class="view_image_text">
+        <image class="image_radius" src="{{headimgurl}}" />
+        <text class="name">{{wechat_name}}</text>
+        <text class="signature">{{signature}}</text>
+      </view>
+  </view>
+  <!-- 第二部分 -->
+  <view class="view_2">
+    <view class="view_tupianwenzi" bindtap="record_submit">
+      <image class="image_tupian" src="/images/icon/update.png"></image>
+      <text class="text_saoyisao">上传记录</text>
+    </view>
+    <view class="view_tupianwenzi" bindtap="record_volunteer">
+      <image class="image_tupian" src="/images/icon/volunteer.png"></image>
+      <text class="text_saoyisao">志愿记录</text>
+    </view>
+    <view class="view_tupianwenzi" bindtap="msg">
+      <image class="image_tupian" src="/images/icon/word.png"></image>
+      <text class="text_saoyisao">消息通知</text>
+    </view>
+  </view>
+  <!-- 第三部分 -->
+  <view class="view_3">
+    <view class="list-item" bindtap="ask_client">
+      <image class="item-image" src="/images/icon/message.png"></image>
+      <text class="item-text">咨询客服</text>
+      <image class="image-jiantou" src="/images/icon/arrow.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item" bindtap="personal_information">
+      <image class="item-image" src="/images/icon/personal.png"></image>
+      <text class="item-text">个人信息</text>
+      <image class="image-jiantou" src="/images/icon/arrow.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item" bindtap="individuation">
+      <image class="item-image" src="/images/icon/personality.png"></image>
+      <text class="item-text">个性化</text>
+      <image class="image-jiantou" src="/images/icon/arrow.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item" bindtap="account_manage">
+      <image class="item-image" src="/images/icon/id.png"></image>
+      <text class="item-text">账号管理</text>
+      <image class="image-jiantou" src="/images/icon/arrow.png"></image>
+    </view>
+    <view class="line"></view>
+    <view class="list-item" bindtap="about">
+      <image class="item-image" src="/images/icon/about.png"></image>
+      <text class="item-text">关于</text>
+      <image class="image-jiantou" src="/images/icon/arrow.png"></image>
+    </view>
+    <view class="line"></view>
+  </view>
+</view>
+<!--隐藏输入弹窗-->
+<modal hidden="{{hiddenmodalput}}" title="个性签名" 
+   			confirm-text="提交" cancel-text="取消" bindcancel="modalfail" 
+   			bindconfirm="modalconfirm">
+        <input type='text' placeholder="请输入签名(不超过20字)" 	maxlength='20' bindinput="input"/>
+</modal>
+<modal hidden="{{hiddenmodalput_}}" title="问题反馈" 
+   			confirm-text="提交" cancel-text="取消" bindcancel="modalfail_" 
+   			bindconfirm="modalconfirm_">
+        <textarea class="modal_input" placeholder="请输入问题(详细信息科拨打客服电话：15807167894)" 	maxlength='400'/>
+</modal>

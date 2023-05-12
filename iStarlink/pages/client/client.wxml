@@ -1,0 +1,62 @@
+<!--pages/client/client.wxml-->
+<view class="title">您对iShare@iCare整体满意程度</view>
+<view class="whole">
+<block class="star" wx:for="{{starYesNum1}}" wx:key="index">
+  <image class="starimg" bindtap="selectStar1" id='{{index+1}}' data-in='selectStarYes' src='/images/icon/star_selected.png'></image>
+</block>
+<block class="star" wx:for="{{starNoNum1}}"  wx:key="index">
+  <image class="starimg" bindtap='selectStar1' id='{{index+1}}' data-in='selectStarNo' src='/images/icon/star.png'></image>
+</block>
+</view>
+<view class="result">您的评价为{{starYesNum1}}星</view>
+<view class="spereator"></view>
+<!--分隔-->
+<view class="title">您对iShare@iCare的界面评价</view>
+<view class="whole">
+<block class="star" wx:for="{{starYesNum2}}" wx:key="index">
+  <image class="starimg" bindtap="selectStar2" id='{{index+1}}' data-in='selectStarYes' src='/images/icon/star_selected.png'></image>
+</block>
+<block class="star" wx:for="{{starNoNum2}}"  wx:key="index">
+  <image class="starimg" bindtap='selectStar2' id='{{index+1}}' data-in='selectStarNo' src='/images/icon/star.png'></image>
+</block>
+</view>
+<view class="result">您的评价为{{starYesNum2}}星</view>
+<view class="spereator"></view>
+<!--分隔-->
+<view class="title">您对iShare@iCare功能评价</view>
+<view class="whole">
+<block class="star" wx:for="{{starYesNum3}}" wx:key="index">
+  <image class="starimg" bindtap="selectStar3" id='{{index+1}}' data-in='selectStarYes' src='/images/icon/star_selected.png'></image>
+</block>
+<block class="star" wx:for="{{starNoNum3}}"  wx:key="index">
+  <image class="starimg" bindtap='selectStar3' id='{{index+1}}' data-in='selectStarNo' src='/images/icon/star.png'></image>
+</block>
+</view>
+<view class="result">您的评价为{{starYesNum3}}星</view>
+<view class="spereator"></view>
+<!--分隔-->
+<view class="title">iShare@iCare给您带来的益处</view>
+<view class="whole">
+<block class="star" wx:for="{{starYesNum4}}" wx:key="index">
+  <image class="starimg" bindtap="selectStar4" id='{{index+1}}' data-in='selectStarYes' src='/images/icon/star_selected.png'></image>
+</block>
+<block class="star" wx:for="{{starNoNum4}}"  wx:key="index">
+  <image class="starimg" bindtap='selectStar4' id='{{index+1}}' data-in='selectStarNo' src='/images/icon/star.png'></image>
+</block>
+</view>
+<view class="result">您的评价为{{starYesNum4}}星</view>
+<view class="spereator"></view>
+<!--分隔-->
+<view class="title">您使用iShare@iCare频率</view>
+<view class="whole">
+<block class="star" wx:for="{{starYesNum5}}" wx:key="index">
+  <image class="starimg" bindtap="selectStar5" id='{{index+1}}' data-in='selectStarYes' src='/images/icon/star_selected.png'></image>
+</block>
+<block class="star" wx:for="{{starNoNum5}}"  wx:key="index">
+  <image class="starimg" bindtap='selectStar5' id='{{index+1}}' data-in='selectStarNo' src='/images/icon/star.png'></image>
+</block>
+</view>
+<view class="result">您的评价为{{starYesNum5}}星</view>
+<view class="spereator"></view>
+<!--分隔-->
+<button open-type="contact" type="primary">进入客服</button>
