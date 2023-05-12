@@ -19,7 +19,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffccff",
-    "navigationBarTitleText": "iStarship",
+    "navigationBarTitleText": "iStarlink",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh":true
   },
@@ -59,7 +59,7 @@
   "plugins": {
     "routePlan": {
     "version": "1.0.2",
-    "provider": "wx63ffb7b7894e99ae"
+    "provider": "wx50b5593e81dd937a"
     }
   },
 

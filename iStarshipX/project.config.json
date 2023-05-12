@@ -11,6 +11,7 @@
         "urlCheck": true,
         "scopeDataCheck": false,
         "coverView": true,
+        "checkSiteMap": false,
         "es6": true,
         "postcss": true,
         "compileHotReLoad": false,

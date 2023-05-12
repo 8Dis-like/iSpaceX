@@ -40,8 +40,8 @@ Page({
   //导航按钮
   nav: function (e) {
     let plugin = requirePlugin('routePlan');
-    let key = 'I5UBZ-VEAK4-SEPUZ-DBRNI-2YSOH-RGFOO';  //使用在腾讯位置服务申请的key
-    let referer = 'iShare@iCare';   //调用插件的app的名称
+    let key = 'YU4BZ-EO3AQ-AKR5L-BZP3C-6XXJH-RSFOJ';  //使用在腾讯位置服务申请的key
+    let referer = 'iStarlink';   //调用插件的app的名称
     let endPoint = JSON.stringify({  //终点
       'name': this.data.address[this.data.index].title,
       'latitude': this.data.markers[this.data.index].latitude,
@@ -58,10 +58,11 @@ Page({
     })
     if(this.data.destination!=''){
       wx.request({
-        url:'https://apis.map.qq.com/ws/place/v1/search?keyword='+this.data.destination+'&boundary=nearby(' + this.data.latitude + ',' + this.data.longitude + ',1000)&key=I5UBZ-VEAK4-SEPUZ-DBRNI-2YSOH-RGFOO',
+        url:'https://apis.map.qq.com/ws/place/v1/search?keyword='+this.data.destination+'&boundary=nearby(' + this.data.latitude + ',' + this.data.longitude + ',1000)&key=YU4BZ-EO3AQ-AKR5L-BZP3C-6XXJH-RSFOJ',
         success: res=>{
           console.log(this.data.destination)
           var arr = res.data.data
+          console.log(res)
           console.log(arr)
           var markers=[]
           var address=[]
