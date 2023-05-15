@@ -9,11 +9,12 @@ input{
 }
 
 button{
-    margin-top: 80rpx;
+    margin-top: 60rpx;
     margin-bottom: 40rpx;
 }
 
 .InputInfo{
+    margin-top: 10rpx;
     width: 95%;
     margin-left: 5%;
     height: 350rpx;
@@ -56,7 +57,7 @@ button{
     height: 85rpx;
     width: 580rpx;
     font-size: 32rpx;
-    color: lightgreen;
+    color: rgb(124, 241, 216);
     text-align: center;
     padding-top: 18rpx;
     margin-left: 20rpx;
@@ -74,7 +75,7 @@ button{
     margin: 0 auto;
     width: 90%;
     height: 2rpx;
-    background: linear-gradient(to right, #ead6ee, #f56ead, #ead6ee);
+    background: linear-gradient(to right, #a4d5e6, #61f1f1, #57e0c3);
     align-items: center;
     justify-content: center;
 }
@@ -102,7 +103,7 @@ button{
     height: 200rpx;  
     margin-top: 14rpx;
     margin-left: 14rpx;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(241, 239, 239);
     
 }
 

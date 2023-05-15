@@ -9,10 +9,11 @@ info{
   background-color: white;
 }
 .title{
-  font-weight: bold;
-  font-size: 40rpx;
+  font-weight: normal;
+  font-size: 32rpx;
   margin: 32rpx;
-  border:2px solid #ffcc66;
+  text-align: center;
+  border: 2px solid #6cb5dc;
   border-radius: 20rpx;
   width:550rpx;
   height:60rpx;
@@ -23,9 +24,9 @@ info{
 }
 .navigate{
   position: absolute;
-  right: 32rpx;
-  bottom: 28rpx;
+  right: 38rpx;
+  bottom: 22rpx;
 }
 .navigate image{
-  width: 120rpx;
+width: 100rpx;
 }
