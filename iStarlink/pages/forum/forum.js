@@ -26,7 +26,7 @@ Page({
         wxImage:[], // 微信用户头像的url
         wxname:[], // 微信用户的名称
         longitude:[],//经度
-        latitude:[],//维度
+        latitude:[],//纬度
 
         isPopping: false,
         animPlus: {},
@@ -52,7 +52,7 @@ Page({
     },
 
     AddInfo:function(e){
-      this.takeback(); // 收回动画
+      //this.takeback(); // 收回动画
       this.setData({
           isPopping: true
       })
@@ -61,111 +61,7 @@ Page({
       })
   },
 
-
-//点击弹出
-  plus: function () {
-  if (this.data.isPopping) {
-    //缩回动画
-    this.popp();
-    this.setData({
-      isPopping: false
-    })
-  } else if (!this.data.isPopping) {
-    //弹出动画
-    this.takeback();
-    this.setData({
-      isPopping: true
-    })
-  }
-  },
-
-//弹出动画
-popp: function () {
-  //us顺时针旋转
-  var animationPlus = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  var animationcollect = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  var animationTranspond = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  var animationInput = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  var animationCloud = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  var animationWrite = wx.createAnimation({
-    duration: 400,
-    timingFunction: 'ease-out'
-  })
-  animationPlus.rotateZ(180).step();
-  animationcollect.translate(-90, -100).rotateZ(180).opacity(1).step();
-  animationTranspond.translate(-140, 0).rotateZ(180).opacity(1).step();
-  animationInput.translate(-90, 100).rotateZ(180).opacity(1).step();
-  animationCloud.translate(0, 135).rotateZ(180).opacity(1).step();
-  animationWrite.translate(0, -135).rotateZ(180).opacity(1).step();
-  this.setData({
-    animPlus: animationPlus.export(),
-    animCollect: animationcollect.export(),
-    animTranspond: animationTranspond.export(),
-    animInput: animationInput.export(),
-    animCloud: animationCloud.export(),
-    animWrite: animationWrite.export(),
-  })
-},
-  //收回动画
-  takeback: function () {
-    //us逆时针旋转
-    var animationPlus = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    var animationcollect = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    var animationTranspond = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    var animationInput = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    var animationCloud = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    var animationWrite = wx.createAnimation({
-      duration: 400,
-      timingFunction: 'ease-out'
-    })
-    animationPlus.rotateZ(0).step();
-    animationcollect.translate(0, 0).rotateZ(0).opacity(0).step();
-    animationTranspond.translate(0, 0).rotateZ(0).opacity(0).step();
-    animationInput.translate(0, 0).rotateZ(0).opacity(0).step();
-    animationCloud.translate(0, 0).rotateZ(0).opacity(0).step();
-    animationWrite.translate(0, 0).rotateZ(0).opacity(0).step();
-    this.setData({
-      animPlus: animationPlus.export(),
-      animCollect: animationcollect.export(),
-      animTranspond: animationTranspond.export(),
-      animInput: animationInput.export(),
-      animCloud: animationCloud.export(),
-      animWrite: animationWrite.export(),
-    })
-  },
-
   Search:function(e){
-      this.takeback(); // 收回动画
       this.setData({
           isPopping: true
       })
@@ -203,7 +99,7 @@ popp: function () {
                 wxImage:[], // 微信用户头像的url
                 wxname:[], // 微信用户的名称
                 longitude:[],//经度
-                latitude:[],//维度
+                latitude:[],//纬度
               })
               db.where({
                 EventType:this.data.typechosen

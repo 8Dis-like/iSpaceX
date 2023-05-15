@@ -24,7 +24,7 @@
             <view class="feed-content" data-idx="{{idx}}" bindtap="Showdetail">
                 <!--事件类型-->
                 <view class="Type">
-                    <text>@ {{eventype[idx]}}</text>
+                    <text># {{eventype[idx]}}</text>
                 </view>
                 <!--标题-->
                 <view class="Title">

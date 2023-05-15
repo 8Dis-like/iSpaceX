@@ -1,9 +1,8 @@
 <!--pages/Write/Write.wxml-->
 
 <view class="Maincontainer">
-    <input name="Title" placeholder="起一个有意义的标题..." bindinput="titleinput"/>
     <!--用户输入描述信息-->
-    <textarea value="{{InputInfo}}" class="InputInfo" placeholder="分享消息...(最多输入140字)" maxlength="140" show-confirm-bar="true" bindinput="GetInputInfo"></textarea>
+    <textarea value="{{InputInfo}}" class="InputInfo" placeholder="请输入内容...(最多输入140字)" maxlength="140" show-confirm-bar="true" bindinput="GetInputInfo"></textarea>
     <!--用户选择照片或视频，用九宫格呈现-->
     <view class="MediaContainer">
         <view class="InnerHolder" wx:for="{{Imglist}}" wx:for-index="idx" wx:for-item="Imgsrc" wx:key="idx">
@@ -49,5 +48,5 @@
     </view>
     <!--分割线-->
     <view class="spereator"></view>
-    <button type="primary" bindtap="Upload">发布</button>
+    <button type="primary" bindtap="Upload">发 布</button>
 </view>
