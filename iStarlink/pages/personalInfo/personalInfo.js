@@ -4,15 +4,11 @@ Page({
 
 
   data: {
+    personalsign:'',
     Name:'',
-    idnumber:'',
     gender:'',
-    country:'',
-    province:'',
     city:'',
-    job:'',
     phone:'',
-    vitalphone:'',
   },
 
 
@@ -28,25 +24,17 @@ Page({
     }).get({
       success: res=> {
         console.log("查询数据成功", res)
+        app.globalData.loger.personalsign=res.data[0].personalsign
         app.globalData.loger.name=res.data[0].name
-        app.globalData.loger.id=res.data[0].id
         app.globalData.loger.gender=res.data[0].gender
-        app.globalData.loger.country=res.data[0].country
-        app.globalData.loger.province=res.data[0].province
         app.globalData.loger.city=res.data[0].city
-        app.globalData.loger.job=res.data[0].job
         app.globalData.loger.phone=res.data[0].phone
-        app.globalData.loger.vitalphone=res.data[0].vitalphone
         this.setData({//初值
+          sign:app.globalData.loger.personalsign,
           Name:app.globalData.loger.name,
-          idnumber:app.globalData.loger.id,
           gender:app.globalData.loger.gender,
-          country:app.globalData.loger.country,
-          province:app.globalData.loger.province,
           city:app.globalData.loger.city,
-          job:app.globalData.loger.job,
           phone:app.globalData.loger.phone,
-          vitalphone:app.globalData.loger.vitalphone,
         })
      }
     })
@@ -90,16 +78,44 @@ Page({
   onShareAppMessage() {
 
   },
+  //选择背景图片
+  choose_bki(e){
+    wx.chooseMedia({//选择图片
+        count: 1,//只能选择1张
+        mediaType: ['image'],//图片类型
+        sourceType: ['album', 'camera'],//拍照或者相册
+        camera:'back',//后置
+        success:res=>{
+          this.setData({
+            backimg:res.tempFiles[0].tempFilePath//存储路径
+          })
+          wx.cloud.database().collection("UserInfo").where({//上传到数据库
+            openid:app.globalData.loger.openid
+          }).get({
+            success:res=>{
+              wx.cloud.database().collection("UserInfo").doc(res.data[0]._id).update({
+                data:{
+                  backimg:this.data.backimg
+                },
+                //success:res=>{
+                 // console.log("修改成功")
+                //}
+              })
+            }
+          })
+        }
+      })
+    },
 
  //修改函数
+ modify_sign(e){
+     this.setData({
+         sign:e.detail.value
+     })
+ },
   modify_name(e){
     this.setData({
       Name:e.detail.value
-    })
-  },
-  modify_id(e){
-    this.setData({
-      idnumber:e.detail.value
     })
   },
   modify_gender(e){
@@ -107,24 +123,9 @@ Page({
       gender:e.detail.value
     })
   },
-  modify_country(e){
-    this.setData({
-      country:e.detail.value
-    })
-  },
-  modify_province(e){
-    this.setData({
-      province:e.detail.value
-    })
-  },
   modify_city(e){
     this.setData({
       city:e.detail.value
-    })
-  },
-  modify_job(e){
-    this.setData({
-      job:e.detail.value
     })
   },
   modify_phone(e){
@@ -132,24 +133,15 @@ Page({
       phone:e.detail.value
     })
   },
-  modify_vitalphone(e){
-    this.setData({
-      vitalphone:e.detail.value
-    })
-  },
   //保存修改
   save(e){
     console.log(this.data.Name)
     //修改全局变量
+    app.globalData.loger.personalsign=this.data.personalsign
     app.globalData.loger.name=this.data.Name
-    app.globalData.loger.id=this.data.idnumber
     app.globalData.loger.gender=this.data.gender
-    app.globalData.loger.country=this.data.country
-    app.globalData.loger.province=this.data.province
     app.globalData.loger.city=this.data.city
-    app.globalData.loger.job=this.data.job
     app.globalData.loger.phone=this.data.phone
-    app.globalData.loger.vitalphone=this.data.vitalphone
     console.log(app.globalData.loger)
     //更新数据库
     wx.cloud.database().collection("UserInfo").where({
@@ -158,15 +150,11 @@ Page({
       success:res=>{
         wx.cloud.database().collection("UserInfo").doc(res.data[0]._id).update({
           data:{
+            personalsign:app.globalData.loger.personalsign,
             name:app.globalData.loger.name,
-            id:app.globalData.loger.id,
             gender:app.globalData.loger.gender,
-            country:app.globalData.loger.country,
-            province:app.globalData.loger.province,
             city:app.globalData.loger.city,
-            job:app.globalData.loger.job,
             phone:app.globalData.loger.phone,
-            vitalphone:app.globalData.loger.vitalphone,
           },
           success:res=>{
             console.log("修改成功")

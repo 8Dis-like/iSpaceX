@@ -2,10 +2,43 @@
 button{
   margin: 50rpx;
 }
-
+.top{
+    display: flex;
+    flex-direction: row;
+}
+.top text{
+    color: gray;
+    margin-right: auto;
+    margin-left: 50rpx;
+    margin-top: 50rpx;
+    text-align: center;
+}
+.image1{
+    padding: 1.5%;
+    margin-left: 20rpx;
+    /* margin-right: auto; */
+    margin-top: 30rpx;
+    display: inline-block;
+    width: 100rpx;
+    height: 70rpx;
+    border-radius: 45rpx;
+    top: 10rpx;
+    vertical-align: baseline;
+}
+.topwrite{
+    padding: 1.5%;
+    margin-right: 20rpx;
+    margin-top: 30rpx;
+    width: 70rpx;
+    height: 70rpx;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #646363;
+  }  
 .container{
   padding: 0;
-  
   font-size: 14rpx;
   background-color: #FFCC66;
   color: #000;
@@ -124,6 +157,18 @@ button{
   font-style: italic;
   margin-bottom: 20rpx;
 }
+.Type image{
+width: 20rpx;
+height: 20rpx;
+}
+.Type text{
+    columns: rgb(19, 18, 18); 
+font-size:24rpx; 
+margin-left: 10rpx; 
+margin-right: 25rpx; 
+letter-spacing:2rpx; 
+line-height: 40rpx; 
+}
 .Bottom{
   margin-top: 20rpx;
   margin-bottom: 20rpx;
@@ -150,3 +195,15 @@ right: 100rpx;
 opacity: 0;
 }
 
+.BriefIn image{
+height:30rpx;
+width: 30rpx;
+}
+.BriefIn text{
+color:#666; 
+font-size:24rpx; 
+margin-left: 10rpx; 
+margin-right: 25rpx; 
+letter-spacing:2rpx; 
+line-height: 40rpx; 
+}

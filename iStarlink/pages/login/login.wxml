@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view wx:if="{{canIUse}}">
   <view class='header'>
-    <image src='/images/icon/share_max.png'></image>
+    <image src='/images/icon/login.png'></image>
   </view>
   <view class='content'>
     <view>申请获取以下权限</view>

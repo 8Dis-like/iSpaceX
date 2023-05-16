@@ -1,18 +1,40 @@
 /* pages/personalInfo/personalInfo.wxss */
 page{
   background: white;
-  font-size: 32rpx;
+  font-size: 35rpx;
+  font-weight: 700;
 }
+.image_radius {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: black;
+    margin-top: 90rpx;
+    margin-left: 280rpx;
+    }
+.name {
+color: blue;
+font-size:20px;
+font-weight:600;
+position: absolute;
+margin-top: 270rpx;
+margin-left: -140rpx;
+} 
 .info>view{
-  background: white;
+  background:white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 20rpx;
-  line-height: 80rpx;
-  border-bottom: 2px solid gray;
-  height: 80rpx;
+  line-height: 50rpx;
+  border-bottom: 2px solid #C0C0C0;
+  height: 70rpx;
+  margin-top: 20rpx;
+}
+.info>view:first-child{
+    margin-top: 100rpx;
+    border-top: 2px solid #C0C0C0;
 }
 .info>view:last-child{
   border: none;
@@ -31,6 +53,27 @@ page{
 .item-vital2{
   flex: 1;
   text-align: right;
+}
+.btn{
+    width: 10rpx;
+    height: 70rpx;
+    background-color:green; /* 设置背景色为绿色 */
+    color:white;
+    font-size: 18px; /* 设置字体大小为 14px */
+    text-align: center; /* 设置文本水平居中对齐 */
+    position: fixed; /* 将按钮设置为固定定位 */
+    font-weight: 600;
+    top:10rpx;
+    right: 5rpx;
+    display: inline-block;
+    text-align: center;
+    padding: 4rpx 1rpx;
+  }
+.bkimg{
+    width: 90rpx;
+    height:70rpx;
+    border: 6rpx solid gray;
+
 }
 
 

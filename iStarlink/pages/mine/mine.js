@@ -91,7 +91,8 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+ 
+  
   //上传记录
   record_submit(e){
     wx.navigateTo({//跳转到上传记录界面
@@ -117,11 +118,13 @@ Page({
   },
 
   //咨询客服
-  ask_client(e){
-    wx.navigateTo({//跳转到客服界面
-      url: '/pages/client/client?id=1',
-    })
+  onTapContact(e) {
+    wx.openCustomerServiceDialog({
+        sessionFrom: "wechat_mini_program",
+        showMessageCard: true  // 是否显示消息卡片
+    });
   },
+  
 
   //跳转到个人信息界面
   personal_information(e){

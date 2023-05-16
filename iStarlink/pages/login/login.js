@@ -93,8 +93,8 @@ Page({
                 },
               })
               wx.switchTab({
-                url: '../index/index'//跳转到首页
-              })            
+                url:'../forum/forum'//跳转到首页即论坛
+              })    
             } , 
             fail:err=>{
               console.log(err)

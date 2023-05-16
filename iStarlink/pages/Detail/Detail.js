@@ -16,8 +16,8 @@ Page({
 
     Go2There:function(e){ // 跳转至导航；
       let plugin = requirePlugin('routePlan');
-      let key = 'I5UBZ-VEAK4-SEPUZ-DBRNI-2YSOH-RGFOO';  //使用在腾讯位置服务申请的key
-      let referer = 'iShare@iCare';   //调用插件的app的名称
+      let key = 'YU4BZ-EO3AQ-AKR5L-BZP3C-6XXJH-RSFOJ';  //使用在腾讯位置服务申请的key
+      let referer = 'iStarlink';   //调用插件的app的名称
       let endPoint = JSON.stringify({  //终点
         'name': this.data.userinfo.locationname,
         'latitude': this.data.userinfo.latitude,
